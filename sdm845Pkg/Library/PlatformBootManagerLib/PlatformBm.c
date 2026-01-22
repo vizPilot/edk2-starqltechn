@@ -705,7 +705,7 @@ PlatformBootManagerAfterConsole (
       Print (VERSION_STRING_PREFIX L"%s\n",
         PcdGetPtr (PcdFirmwareVersionString));
     }
-    Print (L"Press VOLUME UP for boot options ");
+    Print (L"Press VOLUME UP for viZBIOS Setup ");
   } else if (FirmwareVerLength > 0) {
     Status = gBS->HandleProtocol (gST->ConsoleOutHandle,
                     &gEfiGraphicsOutputProtocolGuid, (VOID **)&GraphicsOutput);
@@ -785,7 +785,7 @@ PlatformBootManagerWaitCallback (
   Status = BootLogoUpdateProgress (
              White.Pixel,
              Black.Pixel,
-             L"Press VOLUME UP for boot options",
+             L"Press VOLUME UP for viZBIOS Setup",
              White.Pixel,
              (Timeout - TimeoutRemain) * 100 / Timeout,
              0
