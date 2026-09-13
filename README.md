@@ -6,7 +6,7 @@ EDK2 implementation for Snapdragon 845 platforms.
 
 [Support group](https://t.me/woa4starqlte)
 
-[Install guide for OnePlus 6 series](https://github.com/vizPilot/woa-starqlte)
+[Install guide for Samsung Galaxy S9 series](https://github.com/vizPilot/woa-starqlte)
 
 [Contact if you want to add any device](https://t.me/viZPilotCraft)
 
