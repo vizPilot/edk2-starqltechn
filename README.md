@@ -4,13 +4,11 @@ EDK2 implementation for Snapdragon 845 platforms.
 
 ## Resources
 
-[Support group](https://t.me/WinOnOP6)
+[Support group](https://t.me/woa4starqlte)
 
-[Windows Drivers for OnePlus 6 series](https://github.com/Daniel224455/WoA-on-OnePlus6-Series/releases/tag/Drivers)
+[Install guide for OnePlus 6 series](https://github.com/vizPilot/woa-starqlte)
 
-[Install guide for OnePlus 6 series](https://github.com/Daniel224455/WoA-on-OnePlus6-Series)
-
-[Contact if you want to add any device](https://t.me/Daniel6745)
+[Contact if you want to add any device](https://t.me/viZPilotCraft)
 
 ## WARNING
 
