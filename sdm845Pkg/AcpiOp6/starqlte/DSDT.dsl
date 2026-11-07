@@ -62,7 +62,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_HID, "QCOM24A5")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -103,8 +103,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PEP0, 
-                GIO0
+                \_SB.PEP0, 
+                \_SB.GIO0
             })
             Name (_HID, "QCOM2466")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -153,7 +153,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_HID, "QCOM0242")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -180,7 +180,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                SPMI
+                \_SB.SPMI
             })
             Name (_HID, "QCOM0266")  // _HID: Hardware ID
             Name (_CID, "PNP0CA3")  // _CID: Compatible ID
@@ -223,7 +223,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, One)  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PMIC
+                \_SB.PMIC
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -298,9 +298,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
-                PMIC, 
-                ABD, 
-                SCM0
+                \_SB.PMIC, 
+                \_SB.ABD, 
+                \_SB.SCM0
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -331,7 +331,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_HID, "ACPI000E" /* Time and Alarm Device */)  // _HID: Hardware ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PMAP
+                \_SB.PMAP
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -415,8 +415,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PMIC, 
-                ADC1
+                \_SB.PMIC, 
+                \_SB.ADC1
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -795,7 +795,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PMBT
+                \_SB.PMBT
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -818,7 +818,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PMIC
+                \_SB.PMIC
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -980,7 +980,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PMIC
+                \_SB.PMIC
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -43327,7 +43327,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                             "PMICVREGVOTE", 
                             Package (0x06)
                             {
-                                "PPP_RESOURCE_ID_S2DOS05_LDO2", 
+                                "PPP_RESOURCE_ID_LDO14_A", 
                                 One, 
                                 0x001B7740, 
                                 One, 
@@ -43341,7 +43341,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                             "PMICVREGVOTE", 
                             Package (0x06)
                             {
-                                "PPP_RESOURCE_ID_S2DOS05_LDO2", 
+                                "PPP_RESOURCE_ID_LVS2_A", 
                                 One, 
                                 0x002DC6C0, 
                                 One, 
@@ -43587,7 +43587,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, 0x07)  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -43625,7 +43625,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, 0x0A)  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -43658,8 +43658,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, 0x0B)  // _UID: Unique ID
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PEP0, 
-                QGP0
+                \_SB.PEP0, 
+                \_SB.QGP0
             })
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -43686,8 +43686,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, 0x0C)  // _UID: Unique ID
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PEP0, 
-                QGP0
+                \_SB.PEP0, 
+                \_SB.QGP0
             })
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -43714,8 +43714,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, 0x0F)  // _UID: Unique ID
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PEP0, 
-                QGP0
+                \_SB.PEP0, 
+                \_SB.QGP0
             })
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -43742,8 +43742,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, 0x09)  // _UID: Unique ID
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PEP0, 
-                QGP1
+                \_SB.PEP0, 
+                \_SB.QGP1
             })
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -43782,7 +43782,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                 }
             }
 
-            Name (BSRC, Package (0x0B)
+            Name (BSRC, Package (0x0C)
             {
                 Package (0x04)
                 {
@@ -45230,6 +45230,254 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                 Package (0x07)
                 {
                     "DEVICE", 
+                    "\\_SB.IC12", 
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        Zero, 
+                        Package (0x02)
+                        {
+                            "FSTATE", 
+                            Zero
+                        }
+                    }, 
+
+                    Package (0x0B)
+                    {
+                        "DSTATE", 
+                        Zero, 
+                        Package (0x02)
+                        {
+                            "BUSARB", 
+                            Package (0x05)
+                            {
+                                0x03, 
+                                "ICBID_MASTER_BLSP_2", 
+                                "ICBID_SLAVE_EBI1", 
+                                0x53724E00, 
+                                0x0682
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "BUSARB", 
+                            Package (0x05)
+                            {
+                                0x03, 
+                                "ICBID_MASTER_APPSS_PROC", 
+                                "ICBID_SLAVE_BLSP_2", 
+                                0x08D24D00, 
+                                0x02FAF080
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap_1_m_ahb_clk", 
+                                One
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap_1_s_ahb_clk", 
+                                One
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x04)
+                            {
+                                "gcc_qupv3_wrap1_s3_clk", 
+                                0x08, 
+                                0x0124F800, 
+                                0x04
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap1_core_2x_clk", 
+                                One
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap1_core_clk", 
+                                One
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x1F, 
+                                One, 
+                                One, 
+                                One, 
+                                0x03, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x20, 
+                                One, 
+                                One, 
+                                One, 
+                                0x03, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "DSTATE", 
+                        One
+                    }, 
+
+                    Package (0x02)
+                    {
+                        "DSTATE", 
+                        0x02
+                    }, 
+
+                    Package (0x0B)
+                    {
+                        "DSTATE", 
+                        0x03, 
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap_1_m_ahb_clk", 
+                                0x02
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap_1_s_ahb_clk", 
+                                0x02
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap1_s3_clk", 
+                                0x02
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap1_core_2x_clk", 
+                                0x02
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "CLOCK", 
+                            Package (0x02)
+                            {
+                                "gcc_qupv3_wrap1_core_clk", 
+                                0x02
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "BUSARB", 
+                            Package (0x05)
+                            {
+                                0x03, 
+                                "ICBID_MASTER_BLSP_2", 
+                                "ICBID_SLAVE_EBI1", 
+                                Zero, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "BUSARB", 
+                            Package (0x05)
+                            {
+                                0x03, 
+                                "ICBID_MASTER_APPSS_PROC", 
+                                "ICBID_SLAVE_BLSP_2", 
+                                Zero, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x1F, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x20, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero
+                            }
+                        }
+                    }
+                }, 
+
+                Package (0x07)
+                {
+                    "DEVICE", 
                     "\\_SB.IC16", 
                     Package (0x03)
                     {
@@ -46362,8 +46610,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                PILC, 
-                RPEN
+                \_SB.PILC, 
+                \_SB.RPEN
             })
             Name (_HID, "QCOM026C")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -46377,12 +46625,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x06)  // _DEP: Dependencies
             {
-                PEP0, 
-                PILC, 
-                GLNK, 
-                IPC0, 
-                RPEN, 
-                SSDD
+                \_SB.PEP0, 
+                \_SB.PILC, 
+                \_SB.GLNK, 
+                \_SB.IPC0, 
+                \_SB.RPEN, 
+                \_SB.SSDD
             })
             Name (_HID, "QCOM02BE")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -46408,13 +46656,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x07)  // _DEP: Dependencies
             {
-                PEP0, 
-                PILC, 
-                GLNK, 
-                IPC0, 
-                RPEN, 
-                SSDD, 
-                PDSR
+                \_SB.PEP0, 
+                \_SB.PILC, 
+                \_SB.GLNK, 
+                \_SB.IPC0, 
+                \_SB.RPEN, 
+                \_SB.SSDD, 
+                \_SB.PDSR
             })
             Name (_HID, "QCOM023D")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -46481,8 +46729,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                     Name (_ADR, Zero)  // _ADR: Address
                     Name (_DEP, Package (0x02)  // _DEP: Dependencies
                     {
-                        MMU0, 
-                        IMM0
+                        \_SB.MMU0, 
+                        \_SB.IMM0
                     })
                     Method (CHLD, 0, NotSerialized)
                     {
@@ -46498,7 +46746,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                         Name (_SUB, "RENEGA0E")  // _SUB: Subsystem ID
                         Name (_DEP, Package (0x01)  // _DEP: Dependencies
                         {
-                            SPI9
+                            \_SB.SPI9
                         })
                         Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                         {
@@ -46559,15 +46807,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Name (_DEP, Package (0x09)  // _DEP: Dependencies
             {
-                PEP0, 
-                IPA, 
-                GLNK, 
-                IPC0, 
-                PILC, 
-                RFS0, 
-                RPEN, 
-                SSDD, 
-                PDSR
+                \_SB.PEP0, 
+                \_SB.IPA, 
+                \_SB.GLNK, 
+                \_SB.IPC0, 
+                \_SB.PILC, 
+                \_SB.RFS0, 
+                \_SB.RPEN, 
+                \_SB.SSDD, 
+                \_SB.PDSR
             })
             Name (_HID, "QCOM023E")  // _HID: Hardware ID
             Name (WLEN, One)
@@ -46615,10 +46863,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x04)  // _DEP: Dependencies
             {
-                GLNK, 
-                IPC0, 
-                PILC, 
-                RPEN
+                \_SB.GLNK, 
+                \_SB.IPC0, 
+                \_SB.PILC, 
+                \_SB.RPEN
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -46644,8 +46892,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                GLNK, 
-                TFTP
+                \_SB.GLNK, 
+                \_SB.TFTP
             })
         }
 
@@ -46655,9 +46903,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
-                PEP0, 
-                GLNK, 
-                IPC0
+                \_SB.PEP0, 
+                \_SB.GLNK, 
+                \_SB.IPC0
             })
         }
 
@@ -46665,13 +46913,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x07)  // _DEP: Dependencies
             {
-                PEP0, 
-                PILC, 
-                GLNK, 
-                IPC0, 
-                RPEN, 
-                SSDD, 
-                PDSR
+                \_SB.PEP0, 
+                \_SB.PILC, 
+                \_SB.GLNK, 
+                \_SB.IPC0, 
+                \_SB.RPEN, 
+                \_SB.SSDD, 
+                \_SB.PDSR
             })
             Name (_HID, "QCOM02F7")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -46694,7 +46942,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Alias (PSUB, _SUB)
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                IPC0
+                \_SB.IPC0
             })
         }
 
@@ -46732,7 +46980,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_HID, "QCOM02F8")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -46755,7 +47003,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                MMU1
+                \_SB.MMU1
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -46952,7 +47200,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_UID, One)  // _UID: Unique ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -47029,16 +47277,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
 
             Name (_DEP, Package (0x0A)  // _DEP: Dependencies
             {
-                MMU0, 
-                MMU1, 
-                IMM0, 
-                IMM1, 
-                PEP0, 
-                PMIC, 
-                PILC, 
-                RPEN, 
-                TREE, 
-                SCM0
+                \_SB.MMU0, 
+                \_SB.MMU1, 
+                \_SB.IMM0, 
+                \_SB.IMM1, 
+                \_SB.PEP0, 
+                \_SB.PMIC, 
+                \_SB.PILC, 
+                \_SB.RPEN, 
+                \_SB.TREE, 
+                \_SB.SCM0
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -56002,7 +56250,27 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                     }
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
                     {
-                        0x00000286,
+                        0x00000226,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
+                    {
+                        0x00000232,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
+                    {
+                        0x00000284,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
+                    {
+                        0x0000021F,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
+                    {
+                        0x00000236,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
+                    {
+                        0x0000023D,
                     }
                 })
                 Return (RBUF) /* \_SB_.GIO0._CRS.RBUF */
@@ -57185,7 +57453,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                GLNK
+                \_SB.GLNK
             })
             Name (_HID, "QCOM021C")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57195,7 +57463,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                RPEN
+                \_SB.RPEN
             })
             Name (_HID, "QCOM02F9")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57245,9 +57513,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
-                MMU0, 
-                GLNK, 
-                SCM0
+                \_SB.MMU0, 
+                \_SB.GLNK, 
+                \_SB.SCM0
             })
             Name (_HID, "QCOM0297")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57257,8 +57525,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                ADSP, 
-                ARPC
+                \_SB.ADSP, 
+                \_SB.ARPC
             })
             Name (_HID, "QCOM02F3")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57268,8 +57536,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                IPC0, 
-                UFS0
+                \_SB.IPC0, 
+                \_SB.UFS0
             })
             Name (_HID, "QCOM0235")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57315,12 +57583,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x06)  // _DEP: Dependencies
             {
-                PEP0, 
-                RPEN, 
-                PILC, 
-                MMU0, 
-                GSI, 
-                GLNK
+                \_SB.PEP0, 
+                \_SB.RPEN, 
+                \_SB.PILC, 
+                \_SB.MMU0, 
+                \_SB.GSI, 
+                \_SB.GLNK
             })
             Name (_HID, "QCOM02B3")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57345,7 +57613,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_HID, "QCOM02E7")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -57371,7 +57639,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                GLNK
+                \_SB.GLNK
             })
             Name (_HID, "QCOM0225")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -58903,7 +59171,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                PEP0
+                \_SB.PEP0
             })
             Name (_HID, "QCOM02FE")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
@@ -58924,7 +59192,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                GLNK
+                \_SB.GLNK
             })
             Name (_HID, "QCOM02B6")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -58934,6 +59202,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
 
         Device (QGP0)
         {
+            Name (_DEP, Package (0x01)  // _DEP: Dependencies
+            {
+                \_SB.PEP0
+            })
             Name (_HID, "QCOM02F4")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
             Name (_UID, Zero)  // _UID: Unique ID
@@ -58950,26 +59222,21 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                     {
                         0x00000119,
                     }
-                })
-                Return (RBUF) /* \_SB_.QGP0._CRS.RBUF */
-            }
-
-            Method (GPII, 0, Serialized)
-            {
-                Return (Package (0x01)
-                {
-                    Package (0x03)
+					Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
                     {
-                        Zero, 
-                        0x05, 
-                        0x0119
+                        0x0000011B,
                     }
                 })
+                Return (RBUF) /* \_SB_.QGP0._CRS.RBUF */
             }
         }
 
         Device (QGP1)
         {
+            Name (_DEP, Package (0x01)  // _DEP: Dependencies
+            {
+                \_SB.PEP0
+            })
             Name (_HID, "QCOM02F4")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
             Name (_UID, One)  // _UID: Unique ID
@@ -58993,26 +59260,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                 })
                 Return (RBUF) /* \_SB_.QGP1._CRS.RBUF */
             }
-
-            Method (GPII, 0, Serialized)
-            {
-                Return (Package (0x03)
-                {
-                    Package (0x03)
-                    {
-                        One, 
-                        One, 
-                        0x0138
-                    }, 
-
-                    Package (0x03)
-                    {
-                        One, 
-                        0x03, 
-                        0x013A
-                    }
-                })
-            }
         }
 
         Device (SARM)
@@ -59030,8 +59277,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                 Name (_SUB, "RENEGA0E")  // _SUB: Subsystem ID
                 Name (_DEP, Package (0x02)  // _DEP: Dependencies
                 {
-                    GIO0, 
-                    SCM0
+                    \_SB.GIO0, 
+                    \_SB.SCM0
                 })
                 Method (_STA, 0, NotSerialized)  // _STA: Status
                 {
@@ -59066,6 +59313,1097 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             }
         }
 
+        Device (CAMP)
+        {
+            Name (_DEP, Package (0x02)  // _DEP: Dependencies
+            {
+                \_SB.PEP0, 
+                \_SB.PMIC
+            })
+            Name (_HID, "QCOM026F")  // _HID: Hardware ID
+            Name (_UID, 0x1B)  // _UID: Unique ID
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    Memory32Fixed (ReadWrite,
+                        0x0AC40000,         // Address Base
+                        0x0000006C,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC42000,         // Address Base
+                        0x00004E8C,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC4A000,         // Address Base
+                        0x00000C1C,         // Address Length
+                        )
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001EC,
+                    }
+                })
+                Return (RBUF) /* \_SB_.CAMP._CRS.RBUF */
+            }
+
+            Method (PCFG, 0, Serialized)
+            {
+                Return (Package (0x01)
+                {
+                    Package (0x09)
+                    {
+                        0x03, 
+                        Zero, 
+                        0x00210010, 
+                        Zero, 
+                        Zero, 
+                        Zero, 
+                        Zero, 
+                        Zero, 
+                        Zero
+                    }
+                })
+            }
+
+            Method (PERF, 0, NotSerialized)
+            {
+                Name (EBUF, Package (0x02)
+                {
+                    Package (0x05)
+                    {
+                        "COMPONENT", 
+                        Zero, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "CAMP_CLK", 
+                            Package (0x04)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x023C3460, 
+                                0x0124F800
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            One, 
+                            One, 
+                            "NRT_UNCOMP_BANDWIDTH", 
+                            Package (0x28)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x00000002CB417800, 
+                                0x00000002AD741300, 
+                                0x000000028FA6AE00, 
+                                0x0000000271D94900, 
+                                0x00000002540BE400, 
+                                0x00000002363E7F00, 
+                                0x0000000218711A00, 
+                                0x00000001FAA3B500, 
+                                0x00000001DCD65000, 
+                                0x00000001BF08EB00, 
+                                0x00000001A13B8600, 
+                                0x00000001836E2100, 
+                                0x0000000165A0BC00, 
+                                0x0000000147D35700, 
+                                0x000000012A05F200, 
+                                0x000000010C388D00, 
+                                0xEE6B2800, 
+                                0xD09DC300, 
+                                0xC4B20100, 
+                                0xB8C63F00, 
+                                0xACDA7D00, 
+                                0xA0EEBB00, 
+                                0x9502F900, 
+                                0x89173700, 
+                                0x7D2B7500, 
+                                0x713FB300, 
+                                0x6553F100, 
+                                0x59682F00, 
+                                0x4D7C6D00, 
+                                0x4190AB00, 
+                                0x35A4E900, 
+                                0x29B92700, 
+                                0x1DCD6500, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            0x02, 
+                            One, 
+                            "NRT_BANDWIDTH", 
+                            Package (0x28)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x00000002CB417800, 
+                                0x00000002AD741300, 
+                                0x000000028FA6AE00, 
+                                0x0000000271D94900, 
+                                0x00000002540BE400, 
+                                0x00000002363E7F00, 
+                                0x0000000218711A00, 
+                                0x00000001FAA3B500, 
+                                0x00000001DCD65000, 
+                                0x00000001BF08EB00, 
+                                0x00000001A13B8600, 
+                                0x00000001836E2100, 
+                                0x0000000165A0BC00, 
+                                0x0000000147D35700, 
+                                0x000000012A05F200, 
+                                0x000000010C388D00, 
+                                0xEE6B2800, 
+                                0xD09DC300, 
+                                0xC4B20100, 
+                                0xB8C63F00, 
+                                0xACDA7D00, 
+                                0xA0EEBB00, 
+                                0x9502F900, 
+                                0x89173700, 
+                                0x7D2B7500, 
+                                0x713FB300, 
+                                0x6553F100, 
+                                0x59682F00, 
+                                0x4D7C6D00, 
+                                0x4190AB00, 
+                                0x35A4E900, 
+                                0x29B92700, 
+                                0x1DCD6500, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x06)
+                    {
+                        "COMPONENT", 
+                        One, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            One, 
+                            "HF0_UNCOMP_BANDWIDTH", 
+                            Package (0x08)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x4190AB00, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            One, 
+                            One, 
+                            "HF0_BANDWIDTH", 
+                            Package (0x08)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x4190AB00, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            0x02, 
+                            One, 
+                            "NRT_UNCOMP_BANDWIDTH", 
+                            Package (0x08)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x4190AB00, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            0x03, 
+                            One, 
+                            "NRT_BANDWIDTH", 
+                            Package (0x08)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x4190AB00, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }
+                    }
+                })
+                Return (EBUF) /* \_SB_.CAMP.PERF.EBUF */
+            }
+        }
+
+        Device (CAMS)
+        {
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.MPCS
+            })
+            Name (_HID, "QCOM0245")  // _HID: Hardware ID
+            Name (_UID, 0x15)  // _UID: Unique ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (0x0F)
+            }
+
+            Method (SCFG, 0, Serialized)
+            {
+                Return (Package (0x01)
+                {
+                    Package (0x05)
+                    {
+                        "com.qti.sensormodule.0_imx345.bin", 
+                        "com.qti.tuned.imx345.bin", 
+                        0x0015006E, 
+                        0x485B0000, 
+                        Zero
+                    }
+                })
+            }
+
+            Name (PGID, Buffer (0x0A)
+            {
+                "\\_SB.CAMS"
+            })
+            Name (DBUF, Buffer (DBFL){})
+            CreateByteField (DBUF, Zero, STAT)
+            CreateByteField (DBUF, 0x02, DVAL)
+            CreateField (DBUF, 0x18, 0xA0, DEID)
+            Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S2D, 0, NotSerialized)  // _S2D: S2 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = Zero
+                DEID = PGID /* \_SB_.CAMS.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.CAMS.DBUF */
+                }
+            }
+
+            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = 0x03
+                DEID = PGID /* \_SB_.CAMS.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.CAMS.DBUF */
+                }
+            }
+        }
+
+        Device (CAMF)
+        {
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.MPCS
+            })
+            Name (_HID, "QCOM024A")  // _HID: Hardware ID
+            Name (_UID, 0x1A)  // _UID: Unique ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (0x0F)
+            }
+
+            Method (SCFG, 0, Serialized)
+            {
+                Return (Package (0x01)
+                {
+                    Package (0x05)
+                    {
+                        "com.qti.sensormodule.1_imx320.bin", 
+                        "com.qti.tuned.imx320.bin", 
+                        0x00150020, 
+                        0x5E300000, 
+                        Zero
+                    }
+                })
+            }
+
+            Name (PGID, Buffer (0x0A)
+            {
+                "\\_SB.CAMF"
+            })
+            Name (DBUF, Buffer (DBFL){})
+            CreateByteField (DBUF, Zero, STAT)
+            CreateByteField (DBUF, 0x02, DVAL)
+            CreateField (DBUF, 0x18, 0xA0, DEID)
+            Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S2D, 0, NotSerialized)  // _S2D: S2 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = Zero
+                DEID = PGID /* \_SB_.CAMF.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.CAMF.DBUF */
+                }
+            }
+
+            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = 0x03
+                DEID = PGID /* \_SB_.CAMF.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.CAMF.DBUF */
+                }
+            }
+        }
+
+        Device (CAMI)
+        {
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.MPCS
+            })
+            Name (_HID, "QCOM0247")  // _HID: Hardware ID
+            Name (_UID, 0x1C)  // _UID: Unique ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (Zero)
+            }
+
+            Method (SCFG, 0, Serialized)
+            {
+                Return (Package (0x01)
+                {
+                    Package (0x05)
+                    {
+                        "com.qti.sensormodule.tfc_ov7251.bin", 
+                        "UPDATEME.bin", 
+                        0x001500C0, 
+                        0x7750300A, 
+                        Zero
+                    }
+                })
+            }
+
+            Name (PGID, Buffer (0x0A)
+            {
+                "\\_SB.CAMI"
+            })
+            Name (DBUF, Buffer (DBFL){})
+            CreateByteField (DBUF, Zero, STAT)
+            CreateByteField (DBUF, 0x02, DVAL)
+            CreateField (DBUF, 0x18, 0xA0, DEID)
+            Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S2D, 0, NotSerialized)  // _S2D: S2 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = Zero
+                DEID = PGID /* \_SB_.CAMI.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.CAMI.DBUF */
+                }
+            }
+
+            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = 0x03
+                DEID = PGID /* \_SB_.CAMI.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.CAMI.DBUF */
+                }
+            }
+        }
+
+        Device (FLSH)
+        {
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.CAMP
+            })
+            Name (_HID, "QCOM025C")  // _HID: Hardware ID
+            Name (_UID, 0x19)  // _UID: Unique ID
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (Zero)
+            }
+
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, Buffer (0x02)
+                {
+                     0x79, 0x00                                       // y.
+                })
+                Return (RBUF) /* \_SB_.FLSH._CRS.RBUF */
+            }
+        }
+
+        Device (MPCS)
+        {
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.CAMP
+            })
+            Name (_HID, "QCOM02E8")  // _HID: Hardware ID
+            Name (_UID, 0x18)  // _UID: Unique ID
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    Memory32Fixed (ReadWrite,
+                        0x0AC65000,         // Address Base
+                        0x00000900,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC66000,         // Address Base
+                        0x00000900,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC67000,         // Address Base
+                        0x00000900,         // Address Length
+                        )
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001FD,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001FE,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001FF,
+                    }
+                })
+                Return (RBUF) /* \_SB_.MPCS._CRS.RBUF */
+            }
+        }
+
+        Device (JPGE)
+        {
+            Name (_DEP, Package (0x02)  // _DEP: Dependencies
+            {
+                \_SB.CAMP, 
+                \_SB.MMU0
+            })
+            Name (_HID, "QCOM0276")  // _HID: Hardware ID
+            Name (_UID, 0x17)  // _UID: Unique ID
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    Memory32Fixed (ReadWrite,
+                        0x0AC4E000,         // Address Base
+                        0x00000340,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC52000,         // Address Base
+                        0x000001B4,         // Address Length
+                        )
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001FA,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001FB,
+                    }
+                })
+                Return (RBUF) /* \_SB_.JPGE._CRS.RBUF */
+            }
+
+            Method (PERF, 0, NotSerialized)
+            {
+                Name (EBUF, Package (0x02)
+                {
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        Zero, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "JPEG0_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x23C34600, 
+                                0x18148D00, 
+                                0x0BEBC200
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        One, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "DMA_CLK", 
+                            Package (0x05)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x23C34600, 
+                                0x0BEBC200
+                            }
+                        }
+                    }
+                })
+                Return (EBUF) /* \_SB_.JPGE.PERF.EBUF */
+            }
+        }
+
+        Device (VFE0)
+        {
+            Name (_DEP, Package (0x03)  // _DEP: Dependencies
+            {
+                \_SB.MMU0, 
+                \_SB.PEP0, 
+                \_SB.CAMP
+            })
+            Name (_HID, "QCOM0243")  // _HID: Hardware ID
+            Name (_UID, 0x16)  // _UID: Unique ID
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    Memory32Fixed (ReadWrite,
+                        0x0AC00000,         // Address Base
+                        0x00020000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC48000,         // Address Base
+                        0x00001000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC5A000,         // Address Base
+                        0x00004000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0AC6B000,         // Address Base
+                        0x00001000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0ACAF000,         // Address Base
+                        0x00005000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0ACB6000,         // Address Base
+                        0x00005000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x0ACC4000,         // Address Base
+                        0x00005000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x8BF00000,         // Address Base
+                        0x00500000,         // Address Length
+                        )
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001ED,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001EF,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001F1,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001F3,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001F5,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001EE,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001F0,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001F2,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000001F4,
+                    }
+                })
+                Return (RBUF) /* \_SB_.VFE0._CRS.RBUF */
+            }
+
+            Method (PERF, 0, NotSerialized)
+            {
+                Name (EBUF, Package (0x08)
+                {
+                    Package (0x05)
+                    {
+                        "COMPONENT", 
+                        Zero, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "IFE0_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x1C9C3800, 
+                                0x18148D00, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            One, 
+                            One, 
+                            "HF0_UNCOMP_BANDWIDTH", 
+                            Package (0x20)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x00000008D8F9FC00, 
+                                0x0000000826299E00, 
+                                0x0000000684EE1800, 
+                                0x000000055AE82600, 
+                                0x00000004A817C800, 
+                                0x00000003B9ACA000, 
+                                0x0000000342770C00, 
+                                0x00000002CB417800, 
+                                0xEE6B2800, 
+                                0xD09DC300, 
+                                0xC4B20100, 
+                                0xB8C63F00, 
+                                0xACDA7D00, 
+                                0xA0EEBB00, 
+                                0x9502F900, 
+                                0x89173700, 
+                                0x7D2B7500, 
+                                0x713FB300, 
+                                0x6553F100, 
+                                0x59682F00, 
+                                0x4D7C6D00, 
+                                0x4190AB00, 
+                                0x35A4E900, 
+                                0x29B92700, 
+                                0x1DCD6500, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            0x02, 
+                            One, 
+                            "HF0_BANDWIDTH", 
+                            Package (0x20)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x00000008D8F9FC00, 
+                                0x0000000826299E00, 
+                                0x0000000684EE1800, 
+                                0x000000055AE82600, 
+                                0x00000004A817C800, 
+                                0x00000003B9ACA000, 
+                                0x0000000342770C00, 
+                                0x00000002CB417800, 
+                                0xEE6B2800, 
+                                0xD09DC300, 
+                                0xC4B20100, 
+                                0xB8C63F00, 
+                                0xACDA7D00, 
+                                0xA0EEBB00, 
+                                0x9502F900, 
+                                0x89173700, 
+                                0x7D2B7500, 
+                                0x713FB300, 
+                                0x6553F100, 
+                                0x59682F00, 
+                                0x4D7C6D00, 
+                                0x4190AB00, 
+                                0x35A4E900, 
+                                0x29B92700, 
+                                0x1DCD6500, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x05)
+                    {
+                        "COMPONENT", 
+                        One, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "IFE1_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x1C9C3800, 
+                                0x18148D00, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            One, 
+                            One, 
+                            "HF1_UNCOMP_BANDWIDTH", 
+                            Package (0x20)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x00000008D8F9FC00, 
+                                0x0000000826299E00, 
+                                0x0000000684EE1800, 
+                                0x000000055AE82600, 
+                                0x00000004A817C800, 
+                                0x00000003B9ACA000, 
+                                0x0000000342770C00, 
+                                0x00000002CB417800, 
+                                0xEE6B2800, 
+                                0xD09DC300, 
+                                0xC4B20100, 
+                                0xB8C63F00, 
+                                0xACDA7D00, 
+                                0xA0EEBB00, 
+                                0x9502F900, 
+                                0x89173700, 
+                                0x7D2B7500, 
+                                0x713FB300, 
+                                0x6553F100, 
+                                0x59682F00, 
+                                0x4D7C6D00, 
+                                0x4190AB00, 
+                                0x35A4E900, 
+                                0x29B92700, 
+                                0x1DCD6500, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            0x02, 
+                            One, 
+                            "HF1_BANDWIDTH", 
+                            Package (0x20)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x00000008D8F9FC00, 
+                                0x0000000826299E00, 
+                                0x0000000684EE1800, 
+                                0x000000055AE82600, 
+                                0x00000004A817C800, 
+                                0x00000003B9ACA000, 
+                                0x0000000342770C00, 
+                                0x00000002CB417800, 
+                                0xEE6B2800, 
+                                0xD09DC300, 
+                                0xC4B20100, 
+                                0xB8C63F00, 
+                                0xACDA7D00, 
+                                0xA0EEBB00, 
+                                0x9502F900, 
+                                0x89173700, 
+                                0x7D2B7500, 
+                                0x713FB300, 
+                                0x6553F100, 
+                                0x59682F00, 
+                                0x4D7C6D00, 
+                                0x4190AB00, 
+                                0x35A4E900, 
+                                0x29B92700, 
+                                0x1DCD6500, 
+                                0x17D78400, 
+                                0x11E1A300, 
+                                0x0BEBC200, 
+                                0x05F5E100, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        0x02, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "IFE_LITE_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x1C9C3800, 
+                                0x18148D00, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        0x03, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "ICP_CLK", 
+                            Package (0x05)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x17D78400, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x04)
+                    {
+                        "COMPONENT", 
+                        0x04, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "IPE0_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x1C9C3800, 
+                                0x18148D00, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            One, 
+                            Zero, 
+                            "IPE1_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x1C9C3800, 
+                                0x18148D00, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        0x05, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "BPS_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x1C9C3800, 
+                                0x18148D00, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        0x06, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "LRME_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x17D78400, 
+                                0x1312D000, 
+                                0x10089D40, 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        0x07, 
+                        Package (0x05)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Zero, 
+                            "FD_CLK", 
+                            Package (0x06)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                0x23C34600, 
+                                0x20113A80, 
+                                0x17D78400, 
+                                Zero
+                            }
+                        }
+                    }
+                })
+                Return (EBUF) /* \_SB_.VFE0.PERF.EBUF */
+            }
+        }
+
         Scope (\_SB)
         {
             Name (GRST, Zero)
@@ -59075,9 +60413,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
-                IPC0, 
-                SCSS, 
-                ARPC
+                \_SB.IPC0, 
+                \_SB.SCSS, 
+                \_SB.ARPC
             })
             Name (_HID, "QCOM0308")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -59146,9 +60484,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_HID, "QCOM02D0")  // _HID: Hardware ID
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
-                PEP0, 
-                PTCC, 
-                URS0
+                \_SB.PEP0, 
+                \_SB.PTCC, 
+                \_SB.URS0
             })
             Device (CON0)
             {
@@ -60874,43 +62212,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
             Name (_SUB, "RENEGA0E")  // _SUB: Subsystem ID
         }
 
-        Device (I2C9)
-        {
-            Name (_DEP, Package (0x02)  // _DEP: Dependencies
-            {
-                PEP0, 
-                GIO0
-            })
-            Name (_HID, "QCOM0010")  // _HID: Hardware ID
-            Alias (PSUB, _SUB)
-            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
-            {
-                GpioInt (Level, ActiveLow, Exclusive, PullNone, 0x0000,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x003E
-                    }
-                GpioInt (Level, ActiveLow, Exclusive, PullNone, 0x0000,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x003F
-                    }
-            })
-        }
-
         Device (TSC1)
         {
             Name (_HID, "SCSY0761")  // _HID: Hardware ID
+			Name (_UID, Zero)
             Alias (PSUB, _SUB)
-            Name (_HRV, One)  // _HRV: Hardware Revision
             Name (_ADR, Zero)  // _ADR: Address
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
-                PEP0, 
-                IC12, 
-                GIO0
+                \_SB.GIO0, 
+                \_SB.IC12, 
+                \_SB.PEP0
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
@@ -60920,7 +62232,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
                         AddressingMode7Bit, "\\_SB.IC12",
                         0x00, ResourceConsumer, , Exclusive,
                         )
-                    GpioInt (Level, ActiveLow, Exclusive, PullNone, 0x0000,
+                    GpioInt (Level, ActiveHigh, Exclusive, PullNone, 0x0000,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -61073,7 +62385,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
-                GLNK
+                \_SB.GLNK
             })
             Name (_HID, "QCOM0224")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
@@ -61083,8 +62395,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM850 ", 0x00000003)
         {
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                SPMI, 
-                PMIC
+                \_SB.SPMI, 
+                \_SB.PMIC
             })
             Name (_HID, "QCOM0221")  // _HID: Hardware ID
             Alias (PSUB, _SUB)
