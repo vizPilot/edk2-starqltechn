@@ -232,7 +232,6 @@ GITCOMMIT="$(git describe --tags --always)"||GITCOMMIT="unknown"
 export GITCOMMIT
 echo > ramdisk
 set -e
-python3 assets/generate-logo.py "${GITCOMMIT}"
 if [ "${DEVICE}" == "all" ]
 then	E=0
 	for i in "${DEVICES[@]}"
